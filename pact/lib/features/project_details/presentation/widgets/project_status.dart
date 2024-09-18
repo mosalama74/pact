@@ -1,53 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:pact/core/utils/app_colors.dart';
-import 'package:pact/core/utils/extension.dart';
-import 'package:pact/core/utils/text_styles.dart';
 
-import '../../../../core/components/custom_text_btn.dart';
-import '../../../../core/utils/date_time_formatter.dart';
-import '../../../project_details/presentation/screens/project_details_screen.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/text_styles.dart';
 
-class ListProjectItem extends StatelessWidget {
-  const ListProjectItem({super.key});
+class ProjectStatus extends StatelessWidget {
+  const ProjectStatus({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-          color: cWhiteColor,
-          borderRadius: BorderRadius.all(Radius.circular(20.r)),
-          boxShadow: const [
-            BoxShadow(
-              color: cLightGreyColor,
-              spreadRadius: .0,
-              blurRadius: .1,
-            ),
-          ]),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Project Title.',
-                style: ts16Black500,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-              CustomTextBtn(
-                btnText: 'Open Project',
-                onPressed: () {
-                  context.navigateTo(const ProjectDetailsScreen());
-                },
-              ),
-            ],
-          ),
-          Container(
+    return  Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(
@@ -57,13 +21,13 @@ class ListProjectItem extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset(
-                    'assets/images/project_img.png',
+                    'assets/images/project_location.png',
                     width: 330.w,
                     fit: BoxFit.cover,
                   ),
                   Container(
                     padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                        const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     color: cProjectItemColor,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -80,7 +44,7 @@ class ListProjectItem extends StatelessWidget {
                                   style: ts14Black400.copyWith(
                                       color: cDarkWhiteColor),
                                 ),
-                                Gap(4.h),
+                                Gap(5.h),
                                 Image.asset(
                                   'assets/icons/loading.png',
                                 ),
@@ -94,7 +58,7 @@ class ListProjectItem extends StatelessWidget {
                                   style:
                                       ts12Black500.copyWith(color: cWhiteColor),
                                 ),
-                                Gap(5.w),
+                                 Gap(5.w),
                                 Container(
                                   width: 20.w,
                                   height: 20.h,
@@ -108,32 +72,11 @@ class ListProjectItem extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Gap(5.h),
-                        mainWorks(),
                       ],
                     ),
                   ),
                 ],
-              )),
-        ],
-      ),
-    );
-  }
-
-  Widget mainWorks() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        SvgPicture.asset('assets/icons/attachment.svg',color: cDarkWhiteColor,),
-        SvgPicture.asset('assets/icons/orders.svg',color: cDarkWhiteColor,),
-        SvgPicture.asset('assets/icons/milestones.svg',color: cDarkWhiteColor,),
-        SvgPicture.asset('assets/icons/site_diary.svg',color: cDarkWhiteColor,),
-        SvgPicture.asset('assets/icons/members.svg',color: cDarkWhiteColor,),
-        Text(
-          DateTimeFormatter.formattedDate(DateTime.now()),
-          style: ts8DarkWhite400,
-        ),
-      ],
-    );
+              ),
+            );
   }
 }

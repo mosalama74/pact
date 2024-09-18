@@ -75,6 +75,11 @@ TextStyle ts16Black500 = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 16.sp,
 );
+TextStyle ts16Black400 = TextStyle(
+  color: cBlackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 16.sp,
+);
 TextStyle ts16Black600 = TextStyle(
   color: cBlackColor,
   fontWeight: FontWeight.w600,
@@ -110,6 +115,12 @@ TextStyle ts24Black400 = TextStyle(
 TextStyle ts40Black400 = TextStyle(
   color: cLightBlackdColor,
   fontWeight: FontWeight.w400,
+  fontSize: 40.sp,
+  fontFamily: 'Righteous',
+);
+TextStyle ts40Black700 = TextStyle(
+  color: cLightBlackdColor,
+  fontWeight: FontWeight.w700,
   fontSize: 40.sp,
   fontFamily: 'Righteous',
 );

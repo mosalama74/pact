@@ -9,6 +9,7 @@ const Color cPrimaryColor = Color(0xFF478FB4);
 const Color cGreyColor = Color(0xff91969B);
 const Color cRedColor = Color(0xffF34E4E);
 const Color cLightGreyColor = Color(0xFF9FA2B2);
+const Color cDarkGreyColor = Color(0xFF4A4646);
 const Color cNavBarIconColor = Color(0xffC0E0EF);
 const Color cSearchIconColor = Color(0xff4A4646);
 const Color cProjectItemColor = Color(0xff1A3645);
