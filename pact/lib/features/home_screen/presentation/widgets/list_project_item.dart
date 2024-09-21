@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:pact/core/utils/app_colors.dart';
 import 'package:pact/core/utils/extension.dart';
+import 'package:pact/core/utils/styles.dart';
 import 'package:pact/core/utils/text_styles.dart';
 
 import '../../../../core/components/custom_text_btn.dart';
@@ -20,13 +21,8 @@ class ListProjectItem extends StatelessWidget {
       decoration: BoxDecoration(
           color: cWhiteColor,
           borderRadius: BorderRadius.all(Radius.circular(20.r)),
-          boxShadow: const [
-            BoxShadow(
-              color: cLightGreyColor,
-              spreadRadius: .0,
-              blurRadius: .1,
-            ),
-          ]),
+          boxShadow: customBoxShadow,
+          ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

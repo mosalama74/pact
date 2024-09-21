@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:pact/core/components/custom_appbar.dart';
 import 'package:pact/core/components/main_elevated_btn.dart';
 import 'package:pact/core/utils/extension.dart';
 import 'package:pact/core/utils/text_styles.dart';
 import '../../../../core/components/logo_pact_vertical_widget.dart';
 import '../../../home_screen/presentation/screens/dashboard.dart';
-import '../../../../core/components/custom_app_bar_widget.dart';
 import '../widgets/bottom_page_shape.dart';
 import '../widgets/email_textff_widget.dart';
 import '../widgets/password_textff_widget.dart';
@@ -17,10 +17,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const CustomAppBarWidget(isImageTitle: false,textAfterArrow: 'pact.',),
-        leadingWidth: 110.w,
-      ),
+      appBar:const CustomAppBar(isTitle: false,textAfterArrow: 'pact.',actions: [],), 
       body: Padding(
         padding: const EdgeInsetsDirectional.only(
             start: 22, end: 23, top: 10, bottom: 10),

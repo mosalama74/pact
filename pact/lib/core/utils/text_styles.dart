@@ -10,6 +10,11 @@ TextStyle ts8DarkWhite400 = TextStyle(
   fontWeight: FontWeight.w400,
   fontSize: 8.sp,
 );
+TextStyle ts8Black400 = TextStyle(
+  color: cBlackColor,
+  fontWeight: FontWeight.w400,
+  fontSize: 8.sp,
+);
 
 //------- 10 ---------
 TextStyle ts10Black600 = TextStyle(
@@ -83,6 +88,11 @@ TextStyle ts16Black400 = TextStyle(
 TextStyle ts16Black600 = TextStyle(
   color: cBlackColor,
   fontWeight: FontWeight.w600,
+  fontSize: 16.sp,
+);
+TextStyle ts16Black700 = TextStyle(
+  color: cBlackColor,
+  fontWeight: FontWeight.w700,
   fontSize: 16.sp,
 );
 //------- 18 ---------

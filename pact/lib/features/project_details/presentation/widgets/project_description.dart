@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:pact/core/components/custom_text_btn.dart';
 import 'package:pact/core/utils/app_colors.dart';
 
+import '../../../../core/utils/styles.dart';
 import '../../../../core/utils/text_styles.dart';
 
 class ProjectDescription extends StatelessWidget {
@@ -21,12 +22,7 @@ class ProjectDescription extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(10.r),
         ),
-        boxShadow: const [
-            BoxShadow(
-              color: cLightGreyColor,
-              spreadRadius: .0,
-              blurRadius: .1,
-            ),],
+        boxShadow:customBoxShadow,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-
-import '../../../../core/components/custom_app_bar_widget.dart';
+import 'package:pact/core/components/custom_appbar.dart';
 import '../widgets/main_works_icons.dart';
 import '../widgets/project_description.dart';
 import '../widgets/project_details_header_widget.dart';
@@ -16,35 +15,31 @@ class ProjectDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const CustomAppBarWidget(
-          isImageTitle: false,
+      appBar: CustomAppBar(
+          isTitle: false,
           textAfterArrow: 'Project Title.',
-        ),
-        leadingWidth: 200.w,
-      ),
+          onPressedActionBtn: (){},
+          ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              const ProjectDetailsHeaderWidget(),
-              Gap(15.h),
-              const ProjectStatus(),
-              Gap(15.h),
-              const ProjectDescription(
-                headText: 'Description',
-                bodyText:
-                    'user interface (UI) is anything a user may interact with to use a digital product or service.',
-              ),
-              Gap(15.h),
-              const StartEndProjectDate(),
-              Gap(15.h),
-              const ShowProjectExcutedTime(),
-              Gap(15.h),
-              const MainWorksIcons(),
-            ],
-          ),
+        child: Column(
+          children: [
+            const ProjectDetailsHeaderWidget(),
+            Gap(15.h),
+            const ProjectStatus(),
+            Gap(15.h),
+            const ProjectDescription(
+              headText: 'Description',
+              bodyText:
+                  'user interface (UI) is anything a user may interact with to use a digital product or service.',
+            ),
+            Gap(15.h),
+            const StartEndProjectDate(),
+            Gap(15.h),
+            const ShowProjectExcutedTime(),
+            Gap(15.h),
+            const MainWorksIcons(),
+          ],
         ),
       ),
     );

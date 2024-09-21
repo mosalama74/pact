@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pact/core/components/custom_icon_btn.dart';
+import 'package:pact/core/utils/extension.dart';
 import 'package:pact/core/utils/text_styles.dart';
 
 import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/styles.dart';
+import '../../../members/presentstion/screens/members_screen.dart';
+import '../../../milestones/presentation/screens/milestonesScreen.dart';
 
 class MainWorksIcons extends StatelessWidget {
   const MainWorksIcons({super.key});
@@ -18,13 +22,7 @@ class MainWorksIcons extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(10.r),
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: cLightGreyColor,
-            spreadRadius: .0,
-            blurRadius: .1,
-          ),
-        ],
+        boxShadow: customBoxShadow,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +37,7 @@ class MainWorksIcons extends StatelessWidget {
               buildItem(
                   icon: 'assets/icons/members.svg',
                   title: 'Members',
-                  onPressed: () {}),
+                  onPressed: () {context.navigateToAndRemoveAll(const MembersScreen());}),
                buildItem(
                   icon: 'assets/icons/orders.svg',
                   title: 'Orders',
@@ -51,7 +49,9 @@ class MainWorksIcons extends StatelessWidget {
               buildItem(
                   icon: 'assets/icons/milestones.svg',
                   title: 'Milestones',
-                  onPressed: () {}),
+                  onPressed: () {
+                    context.navigateTo(const MilestonesScreen());
+                  }),
               buildItem(
                   icon: 'assets/icons/attachment.svg',
                   title: 'Attachment',

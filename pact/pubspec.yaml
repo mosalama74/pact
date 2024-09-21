@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  dio: ^5.7.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -73,6 +74,10 @@ flutter:
     - family: Righteous
       fonts:
         - asset: assets/fonts/Righteous-Regular.ttf
+
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans-VariableFont_opsz,wght.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_intl:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gap/gap.dart';
 import 'package:pact/core/utils/app_colors.dart';
+import 'package:pact/core/utils/styles.dart';
 import 'package:pact/core/utils/text_styles.dart';
 
 class ShowProjectExcutedTime extends StatelessWidget {
@@ -25,13 +25,7 @@ class ShowProjectExcutedTime extends StatelessWidget {
       decoration: BoxDecoration(
         color: cWhiteColor,
         borderRadius: BorderRadius.circular(20.r),
-        boxShadow: const [
-          BoxShadow(
-            color: cLightGreyColor,
-            spreadRadius: .0,
-            blurRadius: .1,
-          ),
-        ],
+        boxShadow: customBoxShadow,
       ),
       child: Column(
         children: [
