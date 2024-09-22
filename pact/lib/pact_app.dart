@@ -1,10 +1,13 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pact/core/utils/app_colors.dart';
+import 'package:pact/core/api/dio_consumer.dart';
+import 'package:pact/features/auth/presentation/cubit/user_cubit.dart';
+import 'core/app_theme.dart';
 import 'features/onBoarding/splash_screen.dart';
 import 'generated/l10n.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PactApp extends StatelessWidget {
   const PactApp({super.key});
@@ -16,31 +19,27 @@ class PactApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          theme: ThemeData(
-            scaffoldBackgroundColor: cWhiteColor,
-            appBarTheme: const AppBarTheme(
-              backgroundColor: cWhiteColor,
-              elevation: 0,
-              shape: Border(bottom: BorderSide(color: cLightBlackdColor, width: 1)),
-              systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: cWhiteColor,
-                statusBarIconBrightness: Brightness.dark,
-              ),
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => UserCubit(DioConsumer(dio: Dio(),)),
             ),
-            fontFamily: 'Poppins',
+           
+          ],
+          child: MaterialApp(
+            theme: appTheme,
+            debugShowCheckedModeBanner: false,
+            locale: const Locale('en'),
+            localizationsDelegates: const [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+            home: const SplashScreen(),
           ),
-        debugShowCheckedModeBanner: false,
-        locale: const Locale('en'),
-              localizationsDelegates: const [
-                  S.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate,
-                  GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: S.delegate.supportedLocales,
-              home: const SplashScreen(),
-          ); 
+        );
       },
     );
   }

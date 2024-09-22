@@ -9,7 +9,7 @@ import 'package:pact/core/utils/text_styles.dart';
 
 import '../../../../core/components/custom_text_btn.dart';
 import '../../../../core/utils/date_time_formatter.dart';
-import '../../../project_details/presentation/screens/project_details_screen.dart';
+import '../../../project_details/presentation/pages/project_details_screen.dart';
 
 class ListProjectItem extends StatelessWidget {
   const ListProjectItem({super.key});

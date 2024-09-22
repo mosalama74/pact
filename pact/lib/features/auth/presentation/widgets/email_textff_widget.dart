@@ -3,15 +3,19 @@ import 'package:pact/core/components/custom_textff.dart';
 import 'package:pact/features/auth/presentation/widgets/email_password_prefix_icon.dart';
 
 class EmailTextffWidget extends StatelessWidget {
-  const EmailTextffWidget({super.key});
+   const EmailTextffWidget({super.key, this.emailvalidator, this.emailController});
 
+final String? Function(String?)? emailvalidator;
+final TextEditingController? emailController;
   @override
   Widget build(BuildContext context) {
-    return const CustomTextff(
+    return CustomTextff(
               hintText: 'Email',
-              prefixIcon: EmailPasswordPrefixIcon(prefixIcon: 'assets/icons/email.svg',),
+              prefixIcon: const EmailPasswordPrefixIcon(prefixIcon: 'assets/icons/email.svg',),
               keyboardType: TextInputType.emailAddress,
               obscureText: false,
+              controller: emailController,
+              validator:emailvalidator,
             );
   }
 }

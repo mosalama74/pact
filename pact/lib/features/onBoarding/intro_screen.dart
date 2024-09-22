@@ -5,7 +5,7 @@ import 'package:gap/gap.dart';
 import 'package:pact/core/utils/app_colors.dart';
 import 'package:pact/core/utils/extension.dart';
 import 'package:pact/core/utils/text_styles.dart';
-import 'package:pact/features/auth/presentation/screens/login_screen.dart';
+import 'package:pact/features/auth/presentation/pages/login_screen.dart';
 
 import '../../core/components/main_elevated_btn.dart';
 import '../auth/presentation/widgets/bottom_page_shape.dart';

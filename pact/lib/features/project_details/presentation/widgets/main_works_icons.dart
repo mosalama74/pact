@@ -6,8 +6,8 @@ import 'package:pact/core/utils/text_styles.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/styles.dart';
-import '../../../members/presentstion/screens/members_screen.dart';
-import '../../../milestones/presentation/screens/milestonesScreen.dart';
+import '../../../members/presentation/pages/members_screen.dart';
+import '../../../milestones/presentation/pages/milestonesScreen.dart';
 
 class MainWorksIcons extends StatelessWidget {
   const MainWorksIcons({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pact/features/members/presentstion/widgets/member_item.dart';
+import 'package:pact/features/members/presentation/widgets/member_item.dart';
 
 class MembersListViewItem extends StatelessWidget {
   const MembersListViewItem({super.key});

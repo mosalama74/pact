@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pact/features/home_screen/presentation/screens/home_screen.dart';
-import 'package:pact/features/home_screen/presentation/screens/notification_screen.dart';
-import 'package:pact/features/home_screen/presentation/screens/profile_screen.dart';
+import 'package:pact/features/home_screen/presentation/pages/home_screen.dart';
+import 'package:pact/features/home_screen/presentation/pages/notification_screen.dart';
+import 'package:pact/features/home_screen/presentation/pages/profile_screen.dart';
 import 'package:pact/features/home_screen/presentation/widgets/nav_bar_widget.dart';
 
 class DashboardScreen extends StatefulWidget {
